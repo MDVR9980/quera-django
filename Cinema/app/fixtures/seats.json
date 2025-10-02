@@ -1,0 +1,12 @@
+[
+  {"model": "app.seat", "pk": 1, "fields": {"number": 31}},
+  {"model": "app.seat", "pk": 2, "fields": {"number": 32}},
+  {"model": "app.seat", "pk": 3, "fields": {"number": 33}},
+  {"model": "app.seat", "pk": 4, "fields": {"number": 34}},
+  {"model": "app.seat", "pk": 5, "fields": {"number": 35}},
+  {"model": "app.seat", "pk": 6, "fields": {"number": 36}},
+  {"model": "app.seat", "pk": 7, "fields": {"number": 37}},
+  {"model": "app.seat", "pk": 8, "fields": {"number": 38}},
+  {"model": "app.seat", "pk": 9, "fields": {"number": 39}},
+  {"model": "app.seat", "pk": 10, "fields": {"number": 40}}
+]

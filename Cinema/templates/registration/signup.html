@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Signup</title>
-</head>
-<body>
-<h2>Sign up</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-</form>
-</body>
+  </head>
+  <body>
+    <h2>Sign up</h2>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }} {% if next %}
+      <input type="hidden" name="next" value="{{ next }}" />
+      {% endif %}
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
 </html>
-
