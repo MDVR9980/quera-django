@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+</head>
+<body>
+<h3>This is the home page for project <span style="color: green">{{ project.name }}</span></h3>
+<p>Your role in this project: <span style="color: #47cd56">{{ current_membership.get_role_display }}</span></p>
+<h4>You are the member of bellow projects: </h4>
+<ul>
+    {% for membership in memberships %}
+        <li>
+            <a href="{% url 'active_project' membership.project.id %}">
+                {{ membership.project.name }} as {{ membership.get_role_display }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
