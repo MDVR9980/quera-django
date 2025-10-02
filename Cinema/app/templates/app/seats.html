@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seat list</title>
+</head>
+<body>
+<h3>Seats available for this movie:</h3>
+<ul>
+    {% if seats.count == 0 %}
+        <li>sold out!</li>
+    {% endif %}
+    {% for seat in seats %}
+        <li><a href="{% url 'reserve_seat' movie.id seat.id %}">Seat {{ seat.number }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>
