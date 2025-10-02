@@ -1,17 +1,18 @@
-{% load static %}
+{% load static %} {% load filters %} {# Load custom filters #}
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="{% static "CSS/intro.css" %}">
-</head>
-<body>
-    <div class='intro'>
-      <div class='wave -one'></div>
-      <div class='wave -two'></div>
-      <div class='wave -three'></div>
-      <div class='title'>{{ postal_card_text }}</div>
+  </head>
+  <body>
+    <div class="intro">
+      <div class="wave -one"></div>
+      <div class="wave -two"></div>
+      <div class="wave -three"></div>
+      <!-- Apply the en_to_fa filter to convert digits to Persian -->
+      <div class="title">{{ postal_card_text|en_to_fa }}</div>
     </div>
-</body>
+  </body>
 </html>
